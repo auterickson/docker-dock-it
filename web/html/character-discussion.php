@@ -1,4 +1,7 @@
 <?php
+/**
+ * @var mysqli $db Database Connection
+ */
 session_name('aerickson26_final_logins');
 session_start();
 

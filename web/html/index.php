@@ -1,30 +1,48 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dock It</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Rancho&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
-        body { font-family: Lato, sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: Rancho, cursive; }
-        h1 { font-size: 5em; margin-bottom: 0; text-shadow: 0 .2rem .5rem var(--blue); }
-        .bg-black { background-color: #232323; border-bottom: 5px solid var(--blue);}
-
-    </style>
-</head>
-<body class="vh-100">
-<div class="d-flex align-items-start flex-column h-100">
-
-    <div class="text-center sticky-top shadow-lg p-2 w-100 text-light bg-black">
-        <h1>Dock It</h1>
-        <a href="phpinfo.php" target="content_frame" class="px-2">PHP Info</a> |
-        <a href="world.php" target="content_frame" class="px-2">The World</a>
-    </div>
-    <iframe src="phpinfo.php" name="content_frame" class="w-100 flex-grow-1 border-0"></iframe>
+<?php
+session_name('aerickson26_final_logins');
+session_start();
+/**
+ * @var mysqli $db Database Connection
+ */
+require_once "includes/database.php";
+require_once "includes/functions.php";
+include "includes/header.php";
+?>
+<div class="box">
+<div class="banner">
+    <h1>Hollow Knight Archives </h1>
+    <h2>Welcome to the Archives!</h2>
+    <p>Here you will find various information about the Hollow Knight game.</p>
 </div>
-</body>
-</html>
+    <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="images/Characters_0022_sprite.png" alt="Hollow Knight Characters">
+            <div class="card-body">
+                <h5 class="card-title">Hollow Knight Character</h5>
+                <p class="card-text">Discover the various NPCs that are found throughout Hollow Knight.</p>
+                <a href="character.php" class=" btn btn-primary">Find Characters</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="images/Bestiary_Grimm_Nightmare_boss.png" alt="Hollow Knight Enemies">
+            <div class="card-body">
+                <h5 class="card-title">Hollow Knight Enemies</h5>
+                <p class="card-text">Look through the numerous bosses that you can take on in Hollow Knight</p>
+                <a href="character.php" class=" btn btn-primary">Find Characters</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="images/Characters_0017_sprite.png" alt="Discussion">
+            <div class="card-body">
+                <h5 class="card-title">Discussion</h5>
+                <p class="card-text">Discuss with other community members about characters, puzzles, items, and other game aspects.</p>
+                <a href="character-discussion.php" class=" btn btn-primary">Discuss</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+include "includes/footer.php";
+mysqli_close($db);
+?>

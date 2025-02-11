@@ -19,12 +19,9 @@ docker compose up -d
 ```shell
 docker exec -it dock-it-author-site-wpcli-1 bash -c " 
 wp plugin delete hello akismet ; 
-wp plugin install blockart-blocks --version=2.0.3 --activate
-wp plugin install loco-translate --version=2.6.2 --activate
-wp plugin install health-check query-monitor everest-forms --activate ;  
-wp plugin activate mailhog ;
-wp theme activate zakra ;
-wp theme delete twentytwentythree twentytwentyfour twentytwentyfive;"
+wp plugin install query-monitor  ae-publications --activate ;  
+wp theme activate ae_wpdfinal ;
+wp theme delete twentytwentytwo twentytwentythree twentytwentyfour twentytwentyfive;"
 ```
 
 ### WordPress
